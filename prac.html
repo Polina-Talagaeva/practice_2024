@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Keywords</title>
+    <link rel="stylesheet" href="prac.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="https://smartpro.hse.ru/my-epp" class="back-button">Назад</a>
+        </div>        
+        <div class="header-right">
+            <span class="user-info">Внешний заказчик</span>
+            <button class="lang-button">RU</button>
+            <a href="https://pmo.hse.ru/servicedesk/customer/portal/81/group/304" class="help-button">Техподдержка</a>
+            <a href="https://smartpro.hse.ru/manual" class="help-button">Инструкции</a>
+        </div>
+    </header>
+    <main id="main-content">
+        <div class="form-buttons">
+            <button type="button" class="cancel-button">Отменить</button>
+            <button type="button" class="save-button" onclick="show_Popup()">Сохранить</button>
+            <a href="https://smartpro.hse.ru/epp/create" class="send-button">Отправить на согласование</a>
+        </div>
+        
+        <form class="keyword-form">
+            <h2>Добавление ключевых слов проекту</h2>
+            <label for="projectName">Наименование</label>
+            <input type="text" id="projectName" name="projectName"><br><br>
+            <label for="projectName">Наименование на английском языке</label>
+            <input type="text" id="projectName" name="projectName"><br><br>
+            <label for="projectName">Наименование на английском языке</label>
+            <input type="text" id="projectName" name="projectName"><br><br>
+            <label for="keywords">Ключевые слова</label>
+            <div class="input-container">
+                <input type="text" id="keywords" name="keywords">
+                <button type="button" class="dropdown-button" onclick="toggleCheckboxList()">&#9662;</button>
+                <div class="checkbox-list">
+                    <label><input type="checkbox" value="программирование" id="prog" name="prog"> программирование</label>
+                    <label><input type="checkbox" value="дизайн"> дизайн</label>
+                    <label><input type="checkbox" value="машинное обучение"> машинное обучение</label>
+                    <label><input type="checkbox" value="лингвистика"> лингвистика</label>
+                    <label><input type="checkbox" value="биология"> биология</label>
+                </div>
+            </div>
+            <button type="button" class="add-button" onclick="addTags()">Добавить тег</button>
+            <button type="button" class="add-button" onclick="add_Tags()">Сохранить тег</button>
+        </form>
+    </main>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="hidePopup()">&times;</span>
+            <p>Данный тег был успешно добавлен к проекту</p>
+        </div>
+    </div>
+
+    <div id="popup_" class="popup_">
+        <div class="popup-content_">
+            <span class="close" onclick="hide_Popup()">&times;</span>
+            <p>Данный проект был успешно сохранён</p>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
